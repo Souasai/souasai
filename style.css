@@ -1,0 +1,20 @@
+body{
+    margin: 0 auto;
+    width: auto;
+    font-size: -webkit-xxx-large;
+    color: white;
+    text-align: center;
+    background-color: #000216
+}
+header{
+    margin: 0;
+    width: auto;
+    height: 100px;
+    background-color: #000216
+}
+#headerparts{
+    text-align: right;
+    vertical-align:middle
+    height: 100px;
+    line-height: 100px;
+}
