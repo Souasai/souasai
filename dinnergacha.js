@@ -191,32 +191,12 @@ $(function(){
 
     }
 
-    //石の処理
-    function processStone(){
-        //【石を減らす処理】
-        //石が足りなければアラートを出し、ガチャ画像を出す
-        haveStone = 300;//document.getElementById('stone').innerHTML;
-        if(haveStone < 100){
-            alert('石が足りません');
-            $('#gachaimage').html('<img src="gachaimage.png">');
-            }
-        else{
-            //石を減らす関数を作る
-            function stoneUse(num1){
-                let stoneNum = num1 - 100;
-                return stoneNum;
-            }
-        }
-        //実際に石を減らす
-        stoneResult = stoneUse(haveStone);
-        //残りの石の数を表示
-        //$("#headerparts").html('<img src="stone.png"><label id="stone">' + stoneResult + '</label>');
-    }
+    
 
     //結果表示
     function showResult(){
         //召喚中画面再生
-        $('<div class="image"><img src="R.gif"></div>').appendTo('#loadarea').hide().fadeIn(2000);
+        $('<div class="image"><img src="images/R.gif"></div>').appendTo('#loadarea').hide().fadeIn(2000);
         //召喚中画面が再生され終わったら消え、結果表示用の画面が出る
         
         setTimeout(function(){
@@ -233,16 +213,8 @@ $(function(){
             3000)
     }
 
-    /*クリックでガチャスタート
-    $('#try').click(function(){
-      viewReset();
-      processStone();
-      createResult();
-      showResult();
-    })  */
     
     viewReset();
-    processStone();
     createResult();
     showResult();
     

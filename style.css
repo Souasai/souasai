@@ -14,7 +14,7 @@ header{
 }
 #headerparts{
     text-align: right;
-    vertical-align:middle
+    vertical-align:middle;
     height: 100px;
     line-height: 100px;
 }
