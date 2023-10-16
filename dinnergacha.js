@@ -172,22 +172,10 @@ $(function(){
     } 
 
     //結果生成
-    function createResult(){
-        // ランダムな数を作る関数を定義
-        function randomChoice(array, num){
-            const arr = array.concat();
-            const choiced = []
-            let l = array.length;
-            let n = Math.min(num, array.length);
+    function createResult(){  
 
-            let i = params.get('id');
-            choiced.push(arr[i]);
-            arr.splice(i, 1);
-            
-            return choiced;
-        }
-        // 全データからランダムに9枚持ってくる
-        result = randomChoice(data, 1);
+        //dataのid番目の情報をresultに入れる。
+        result = [data.concat()[params.get('id')]];
 
     }
 
