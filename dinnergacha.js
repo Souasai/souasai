@@ -154,6 +154,11 @@ data = [
      "rarelity":5}
 ]
 
+
+//クエリパラメータを取得する(written by 岡田)
+const url = new URL(location.href);
+const params = new URLSearchParams(url.search);
+
 $(function(){
 
     //結果のリセット
@@ -163,7 +168,7 @@ $(function(){
         //ガチャの画像を消す
         $('#gachaimage').html("");
         //【ボタンを消す（二重決済防止）】
-        $('#try').hide();
+        //$('#try').hide();
     } 
 
     //結果生成
@@ -174,28 +179,23 @@ $(function(){
             const choiced = []
             let l = array.length;
             let n = Math.min(num, array.length);
-            while(n-- > 0){
-                let i = Math.floor(Math.random() * l--);
-                choiced.push(arr[i]);
-                arr.splice(i, 1);
-            }
+
+            let i = params.get('id');
+            choiced.push(arr[i]);
+            arr.splice(i, 1);
+            
             return choiced;
         }
         // 全データからランダムに9枚持ってくる
-        result = randomChoice(data, 9);
+        result = randomChoice(data, 1);
 
-        // 星5だけのデータからランダムに1枚持ってきて9枚に足す
-        r5data = data.filter((datum) => {
-            return datum.rarelity === 5
-        })
-        result.push(randomChoice(r5data, 1)[0]);
     }
 
     //石の処理
     function processStone(){
         //【石を減らす処理】
         //石が足りなければアラートを出し、ガチャ画像を出す
-        haveStone = document.getElementById('stone').innerHTML;
+        haveStone = 300;//document.getElementById('stone').innerHTML;
         if(haveStone < 100){
             alert('石が足りません');
             $('#gachaimage').html('<img src="gachaimage.png">');
@@ -210,14 +210,15 @@ $(function(){
         //実際に石を減らす
         stoneResult = stoneUse(haveStone);
         //残りの石の数を表示
-        $("#headerparts").html('<img src="stone.png"><label id="stone">' + stoneResult + '</label>');
+        //$("#headerparts").html('<img src="stone.png"><label id="stone">' + stoneResult + '</label>');
     }
 
     //結果表示
     function showResult(){
         //召喚中画面再生
-        $('<div class="image"><img src="result.jpg"></div>').appendTo('#loadarea').hide().fadeIn(2000);
+        $('<div class="image"><img src="R.gif"></div>').appendTo('#loadarea').hide().fadeIn(2000);
         //召喚中画面が再生され終わったら消え、結果表示用の画面が出る
+        
         setTimeout(function(){
             $('#loadarea').html("");
             $('<p>ガチャ結果</p>').appendTo('#result');
@@ -227,16 +228,23 @@ $(function(){
             $('<div class="image"><img src="' + value.img + '"></div><br>').appendTo('#result');
             })
             $('<p>もっと引く？<p>').appendTo('#result');
-            $('#try').show();
+            //$('#try').show();
             },
             3000)
     }
 
-    // クリックでガチャスタート
+    /*クリックでガチャスタート
     $('#try').click(function(){
       viewReset();
       processStone();
       createResult();
       showResult();
-    })
+    })  */
+    
+    viewReset();
+    processStone();
+    createResult();
+    showResult();
+    
 })
+      
