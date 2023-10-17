@@ -195,8 +195,6 @@ $(function(){
             $('<div class="title">' + value.title + ' ★' + value.rarelity + '</div>').appendTo('#result');
             $('<div class="image"><img src="' + value.img + '"></div><br>').appendTo('#result');
             })
-            $('<p>もっと引く？<p>').appendTo('#result');
-            //$('#try').show();
             },
             3000)
     }
