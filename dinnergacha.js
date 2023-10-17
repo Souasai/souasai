@@ -168,15 +168,13 @@ $(function(){
         //ガチャの画像を消す
         $('#gachaimage').html("");
         //【ボタンを消す（二重決済防止）】
-        //$('#try').hide();
+        $('#btn').hide();
     } 
 
     //結果生成
     function createResult(){  
-
         //dataのid番目の情報をresultに入れる。
         result = [data.concat()[params.get('id')]];
-
     }
 
     
@@ -199,10 +197,11 @@ $(function(){
             3000)
     }
 
-    
-    viewReset();
-    createResult();
-    showResult();
+    $('#btn').click(function(){
+        viewReset();
+        createResult();
+        showResult();  
+    })
     
 })
       
