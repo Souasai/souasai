@@ -49,7 +49,7 @@ function addChoco(){
 }
 
 
-intervalID = setInterval(addChoco,1000);
+intervalID = setInterval(addChoco,300);
 
 
 //最後の数字を出す時に数字をかっこよく表示させるやつ
@@ -62,7 +62,7 @@ function countUp() {
             $(this).prop('Counter', 0).animate({
                 Counter: $(this).text()
             }, {
-                duration: 400,
+                duration: 1200,
                 easing: 'swing',
                 step: function (now) {
                     $(this).text(Math.ceil(now));

@@ -44,9 +44,17 @@ header {
     background-image: url(https://www.tirol-choco.com/resource/images/common/bg_block_01.png);
 }
 
+/*結果の数字の外側のdiv*/
 #result_num {
     position: absolute;
     top:200px;
     left: 50%;
     transform: translateX(-50%);
+    
+}
+
+/*結果の数字*/
+#num {
+    font-size: 100px;
+
 }
