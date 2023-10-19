@@ -4,7 +4,7 @@ console.log("f");
 const parentId = 'gacha'; // このIDを実際のIDに変更
 
 // 生成する子divの数
-const numberOfChildDivs = 30; // この数を必要な数に変更
+const numberOfChildDivs = 3; // この数を必要な数に変更
 
 // 親divを取得
 const parentDiv = document.getElementById(parentId);
