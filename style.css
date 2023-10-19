@@ -32,14 +32,25 @@ header {
 
 #gacha img {
     display: block;
-    width: calc(90% / 5 - 25px);
+    width: calc(90vw / 5 - 25px);
     margin-bottom: 30px;
     padding: 50px 10px;
     text-align: center;
+    /*アニメーション*/
+    animation:alpha 3s;
+    animation-fill-mode:forwards;
 }
 
 .news {
     margin-top: 100px;
     height: 300vh;
     background-image: url(https://www.tirol-choco.com/resource/images/common/bg_block_01.png);
+}
+
+@keyframes alpha {
+    0% {
+        opacity:0;
+    } 100% {
+        opacity:1;
+    }
 }
