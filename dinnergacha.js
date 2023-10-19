@@ -206,6 +206,12 @@ $(function(){
         createResult();
         showResult();  
     })
+
+    //ここからボタンを作ったら消すやつ
+    viewReset();
+    createResult();
+    showResult();  
+    //ここまで
     
 })
       
