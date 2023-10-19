@@ -77,7 +77,7 @@ const callback = function (mutationsList, observer) {
     for (const mutation of mutationsList) {
         if (mutation.type === 'childList') {
             observer.disconnect(); // 監視を一時的に解除
-            countU出すとと
+            countUp();
             observer.observe(document.querySelector('#result_num'), config); // 監視を再開
         }
     }
