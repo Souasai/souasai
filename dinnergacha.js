@@ -182,13 +182,13 @@ $(function(){
     //結果表示
     function showResult(){
         //召喚中画面再生
-        $('<div class="image"><img src="images/R.gif"></div>').appendTo('#loadarea').hide().fadeIn(2000);
+        $('<div class="image"><img src="images/gacha.gif"></div>').appendTo('#loadarea').hide().fadeIn(2000);
         //召喚中画面が再生され終わったら消え、結果表示用の画面が出る
         
         setTimeout(function(){
             $('#loadarea').html("");
             $('<p>ガチャ結果</p>').appendTo('#result');
-            //結果・もう一度引くボタンを表示する
+            
             $.each(result, function(key, value){
             $('<div class="title">' + value.title + ' ★' + value.rarelity + '</div>').appendTo('#result');
             $('<div class="image"><img src="' + value.img + '"></div><br>').appendTo('#result');
@@ -196,6 +196,10 @@ $(function(){
             },
             3000)
     }
+
+
+    
+    
 
     $('#btn').click(function(){
         viewReset();
