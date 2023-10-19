@@ -10,7 +10,7 @@ const parentId = 'gacha'; // このIDを実際のIDに変更
 
 
 // 生成する子divの数
-const numberOfChildDivs = params.get('num'); // クエリパラメータのnumから取得
+const numberOfChildDivs = params.get('id'); // クエリパラメータのidから取得
 
 // 親divを取得
 const parentDiv = document.getElementById(parentId);
