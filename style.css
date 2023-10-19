@@ -47,6 +47,14 @@ header {
     background-image: url(https://www.tirol-choco.com/resource/images/common/bg_block_01.png);
 }
 
+
+#result_num {
+    position: absolute;
+    top:200px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 @keyframes alpha {
     0% {
         opacity:0;
