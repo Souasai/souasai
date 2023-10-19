@@ -28,7 +28,8 @@ function addChoco(){
   const childDiv = document.createElement('img');
     
   // 子divのスタイルを設定（サンプルのスタイル）
-  childDiv.src='https://www.tirol-choco.com/resource/images/index/img_tirol_02.png';
+  var random = Math.floor( Math.random() * 9 );
+  childDiv.src="https://www.tirol-choco.com/lineup/images/2303_asrt_varapackcp_" + random + ".png";
   childDiv.style.width = '50px';
   childDiv.style.height = '50px';
   
