@@ -1,20 +1,45 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+
+body {
+    background-image: url(https://www.tirol-choco.com/resource/images/common/bg_body.png);
+    font-family: 'Kosugi Maru', sans-serif;
+    width: 100%;
     margin: 0 auto;
-    width: auto;
-    font-size: -webkit-xxx-large;
-    color: white;
+}
+
+header {
+    height: 100px;
+    display: flex;
+}
+
+.anankosen {
+    height: 50%;
+    margin: 20px 20px 0 auto;
+}
+
+.anankosen img {
+    height: 100%;
+}
+
+#gacha {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    margin: 30px auto;
+    padding-top: 30px;
+}
+
+#gacha img {
+    display: block;
+    width: calc(90% / 5 - 25px);
+    margin-bottom: 30px;
+    padding: 50px 10px;
     text-align: center;
-    background-color: #000216
 }
-header{
-    margin: 0;
-    width: auto;
-    height: 100px;
-    background-color: #000216
-}
-#headerparts{
-    text-align: right;
-    vertical-align:middle;
-    height: 100px;
-    line-height: 100px;
+
+.news {
+    margin-top: 100px;
+    height: 300vh;
+    background-image: url(https://www.tirol-choco.com/resource/images/common/bg_block_01.png);
 }
