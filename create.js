@@ -1,3 +1,11 @@
+data = {
+  "1": "Dランク",
+  "5": "Cランク",
+  "10": "Bランク",
+  "20": "Aランク",
+  "30": "Sランク"
+}
+
 //クエリパラメータを取得する
 const url = new URL(location.href);
 const params = new URLSearchParams(url.search);
@@ -25,7 +33,7 @@ function addChoco(){
     
   // 子divのスタイルを設定（サンプルのスタイル）
   var random = Math.floor( Math.random() * 9 );
-  childDiv.src="https://www.tirol-choco.com/lineup/images/2303_asrt_varapackcp_" + random + ".png";
+  childDiv.src="./images/" + random + ".png";
   
   // 子divを親divに追加
   parentDiv.appendChild(childDiv);
@@ -47,7 +55,7 @@ intervalID = setInterval(addChoco,1000);
 
 var setT1 = setTimeout(function() {  
   Swal.fire({
-    title: '3等賞：10個',
+    title: data[params.get('id')] + '：' + params.get('id') + '個',
     text: '遊んでくれてありがとう！',
     imageUrl: 'https://m.media-amazon.com/images/I/71j+73XfbWL._AC_UF894,1000_QL80_.jpg',
     imageWidth: 400,
