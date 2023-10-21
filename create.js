@@ -57,7 +57,7 @@ var setT1 = setTimeout(function() {
   Swal.fire({
     title: data[params.get('id')] + '：' + params.get('id') + '個',
     text: '遊んでくれてありがとう！',
-    imageUrl: 'https://m.media-amazon.com/images/I/71j+73XfbWL._AC_UF894,1000_QL80_.jpg',
+    imageUrl: './images/result.png',
     imageWidth: 400,
     imageHeight: 200,
     imageAlt: 'Custom image',
