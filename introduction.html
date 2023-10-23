@@ -6,7 +6,7 @@
     <title>情報コースの紹介</title>
 </head>
 <body>
-    <div class="img" id="img">なんで</div>
+    <div class="img" id="img"></div>
     <script>
         
         //クエリパラメータを取得する
@@ -16,7 +16,7 @@
         var imgData = {
             1: 'SOASAI1.png',
             2:'UNKONOW.png',
-            
+
         };
 
         document.getElementById("img").innerHTML = '<img src="intro_images/'+imgData[params.get('id')] + '" width="100%"></img>';
