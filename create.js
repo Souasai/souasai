@@ -1,8 +1,8 @@
 data = {
-  "1": "Cランク",
-  "5": "Bランク",
-  "10": "Aランク",
-  "30": "Sランク"
+    "S" : 30,
+    "A" : 10,
+    "B" : 5,
+    "C" : 1,
 }
 
 //クエリパラメータを取得する
@@ -12,8 +12,11 @@ const params = new URLSearchParams(url.search);
 // 親divのID
 const parentId = 'gacha'; // このIDを実際のIDに変更
 
+//ランク
+const rank = params.get('rank');
+
 //chocoの数
-const numChoco = params.get('num');
+const numChoco = data[rank];
 
 // 親divを取得
 const parentDiv = document.getElementById(parentId);
@@ -45,7 +48,7 @@ intervalID = setInterval(addChoco,1000);
 
 var setT1 = setTimeout(function() {  
   Swal.fire({
-    title: data[numChoco] + '：' + numChoco + '個',
+    title: rank + 'ランク' + '：' + numChoco + '個',
     text: '遊んでくれてありがとう！',
     imageUrl: './images/result.png',
     imageWidth: 400,
