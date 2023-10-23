@@ -6,6 +6,18 @@
     <title>情報コースの紹介</title>
 </head>
 <body>
-    <img src="intro_images/SOASAI1.png" width="100%"></img>
+    <div class="img" id="img">なんで</div>
+    <script>
+        
+        //クエリパラメータを取得する
+        const url = new URL(location.href);
+        const params = new URLSearchParams(url.search);
+
+        var imgData = {
+            1: 'intro_images/SOASAI1.png',
+        };
+
+        document.getElementById("img").innerHTML = '<img src="'+imgData[params.get('id')] + '" width="100%"></img>';
+    </script>
 </body>
 </html>
