@@ -14,10 +14,12 @@
         const params = new URLSearchParams(url.search);
 
         var imgData = {
-            1: 'intro_images/SOASAI1.png',
+            1: 'SOASAI1.png',
+            2:'UNKONOW.png',
+            
         };
 
-        document.getElementById("img").innerHTML = '<img src="'+imgData[params.get('id')] + '" width="100%"></img>';
+        document.getElementById("img").innerHTML = '<img src="intro_images/'+imgData[params.get('id')] + '" width="100%"></img>';
     </script>
 </body>
 </html>
