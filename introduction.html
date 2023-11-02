@@ -14,10 +14,19 @@
         const params = new URLSearchParams(url.search);
 
         var imgData = {
-            1: 'SOASAI1.png',
-            2: '資格.png',
-            3: '太田研究室.png'
-
+            1: 'manaba.png',
+            2: '太田研究室.png',
+            3: 'プログラミング研究部.png',
+            4: 'ロボット研究部.png',
+            5: '卒業研究.png',
+            6: '吉田研究室.png',
+            7: '安野研究室.png',
+            8: '岡本研究室.png',
+            9: '平山研究室.png',
+            10: '杉野研究室.png',
+            11: '福田研究室.png',
+            12: '福見研究室.png',
+            13: '資格.png'
         };
 
         document.getElementById("img").innerHTML = '<img src="intro_images/'+imgData[params.get('id')] + '" width="100%"></img>';
